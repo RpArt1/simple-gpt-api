@@ -1,1 +1,1 @@
-# -simple-gpt-api
+# simple-gpt-api
