@@ -8,5 +8,5 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-RUN mkdir -p /var/log/aidevs/
+RUN mkdir -p /var/log/app/
 

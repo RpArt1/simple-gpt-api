@@ -53,6 +53,21 @@ source https://www.digitalocean.com/community/tutorials/how-to-install-and-use-d
 
 ## github actions plan 
 
-1. on push to main detect if changes were made in *.py files 
-2. if so build container 
-https://stackoverflow.com/questions/60477061/github-actions-how-to-deploy-to-remote-server-using-ssh
+#### prerequisites allow github connection via ssh to server
+
+https://stackoverflow.com/questions/60477061/github-actions-how-to-deploy-to-remote-server-using-ssh*
+
+#### allow ssh connection github --> digitalocean
+1. generate key pair on server
+2. copy public key to authorized keys 
+3. copy priv key to github secrets 
+
+
+
+#### simplest solution 
+For now simplest solution will do 
+step 1/1: on push scp new code to server 
+
+#### more coplex - full automation
+
+ 
