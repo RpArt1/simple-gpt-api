@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-logging
+loging
 pydantic
 openai
 os

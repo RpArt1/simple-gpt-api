@@ -23,6 +23,19 @@ class Reply(BaseModel):
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {"hello": "world"}
+
+@app.get("/test")
+def get_test():
+    logging.info("Test endpoint called")
+    return {"get test": "ok"}
+
+@app.post("/test")
+def post_test():
+    logging.info("Test endpoint called")
+    return {"post test": "ok"}
 
 @app.post(f"/{ENDPOINT}/")
 def handle_question(question: Question):
