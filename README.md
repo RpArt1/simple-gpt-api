@@ -43,3 +43,16 @@ sudo nginx -t
 ```
 sudo systemctl restart nginx.service
 ```
+
+
+# Dockerise python app in digitalocean
+
+## install doker 
+source https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+
+
+## github actions plan 
+
+1. on push to main detect if changes were made in *.py files 
+2. if so build container 
+https://stackoverflow.com/questions/60477061/github-actions-how-to-deploy-to-remote-server-using-ssh
