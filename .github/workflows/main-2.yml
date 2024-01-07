@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Push code to remote server 
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -16,6 +16,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
       - name: Copy files to remote server
-        run: scp -r ./* ${{ secrets.SSH_USER }}@${{ secrets.REMOTE_HOST }}:/app/simple-gpt-api/
+        run: scp -r * ${{ secrets.SSH_USER }}@${{ secrets.REMOTE_HOST }}:/app/simple-gpt-api/
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
