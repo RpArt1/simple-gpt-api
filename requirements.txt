@@ -3,4 +3,3 @@ uvicorn
 loging
 pydantic
 openai
-os

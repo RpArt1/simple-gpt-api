@@ -1,0 +1,9 @@
+__pycache__/
+launch.json
+.gitignore
+.git/*
+.vscode/*
+env/
+*.env/
+*.env.*
+env.*2
