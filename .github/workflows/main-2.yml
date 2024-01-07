@@ -15,7 +15,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-      - name: Push to remote server
-        run: |
-          git remote add deploy ${{ secrets.REMOTE_HOST }}
-          git push deploy main
+      - name: Copy files to remote server
+        run: scp -r ./* ${{ secrets.SSH_USER }}@${{ secrets.REMOTE_HOST }}:/app/simple-gpt-api/
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
